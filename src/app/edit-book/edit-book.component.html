@@ -1,0 +1,59 @@
+<div class="container-fluid">
+
+    <div class="card" style="width: 50%; margin: 10px auto;">
+        <div class="card-header">
+            ADD NEW BOOK
+        </div>
+        <div class="card-body"> 
+
+            <div class="form-group">
+                <label for="id">ID</label>
+                <input [(ngModel)] ="book.id" id="id" class="form-control" type="text" name="id">
+               </div>
+   
+           <div class="form-group">
+             <label for="title">TITLE</label>
+             <input [(ngModel)] ="book.title" id="title" class="form-control" type="text" name="title">
+            </div>
+
+            <div class="form-group">
+                <label for="author">AUTHOR</label>
+                <input [(ngModel)] ="book.author" id="author" class="form-control" type="text" name="author">
+               </div>
+
+               <div class="form-group">
+                <label for="price">PRICE</label>
+                <input [(ngModel)] ="book.price" id="price" class="form-control" type="text" name="price">
+               </div>
+   
+               <div class="form-group">
+                <label for="rating">RATING</label>
+                <input [(ngModel)] ="book.rating" id="rating" class="form-control" type="text" name="rating">
+               </div>
+
+               <div class="form-group">
+                <label for="numberOfPages">NUMBER-OF-PAGES</label>
+                <input  [(ngModel)] ="book.numberOfPages" id="numberOfPages" class="form-control" type="text" name="numberOfPages">
+               </div>
+
+               <div class="form-group">
+                <label for="dateOfPublication">DATE-OF-PUBLICATION</label>
+                <input [(ngModel)] ="book.dateOfPublication" id="dateOfPublication" class="form-control" type="text" name="dateOfPublication">
+               </div>
+   
+               <div class="form-group">
+                <label for="imageUrl">IMAGE-URL</label>
+                <input  [(ngModel)] ="book.imageUrl" id="imageUrl" class="form-control" type="text" name="imageUrl">
+               </div>
+   
+        </div>
+        <div class="card-footer text-muted">
+            <div class="form-group">
+                <button class ="btn btn-primary"(click)="updateBook()">UPDATE</button> 
+                </div>
+             <div class="alert alert-success" role="alert" *ngIf="showAlert">
+                <strong>Successfully updated</strong>
+                <button class="close" (click)="closeAlert()">&times;</button>
+             </div>   
+    </div>
+</div>

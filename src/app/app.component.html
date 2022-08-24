@@ -1,0 +1,19 @@
+<h1 class="text-center">KOUSHIK'S BOOK STORE</h1>
+<nav class="nav bg-dark">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" [routerLink]="['/book-list']">Book List</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" [routerLink]="['/add-book']">Add Book</a>
+  </li>
+    <li class="nav-item ms-auto ">
+      <a class="nav-link active pull" href="#">
+        <i class="bi bi-cart float-end"></i>
+      </a>
+    </li>
+</nav>
+
+<router-outlet></router-outlet>
