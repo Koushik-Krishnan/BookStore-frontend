@@ -6,15 +6,15 @@ import { Book } from './book';
 })
 export class BookFilterPipePipe implements PipeTransform {
 
-  transform(list: Book[], searchBook: string): any{
-    if(!list){
+  transform(list: Book[], searchBook: string): any {
+    if (!list) {
       return [];
     }
-    if(!searchBook){
+    if (!searchBook) {
       return list;
     }
     searchBook = searchBook.toLocaleLowerCase();
-   list = list.filter(b=>{
+    list = list.filter(b => {
       return b.title.includes(searchBook);
     });
     return list;

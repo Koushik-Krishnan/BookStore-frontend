@@ -20,6 +20,10 @@ export class BookListComponent implements OnInit {
   deleteBook(id: number){
     this.bookService.deleteBook(id).subscribe((response)=>{
       console.log(response);
+      this.books = this.books.filter(b=>{
+        return b.id ! = id;
+      }); 
   });
+
 }
 }

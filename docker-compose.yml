@@ -1,0 +1,7 @@
+services: 
+  frontend:
+    container_name: bookstore_frontend
+    build: .
+    ports: 
+      - 8081:80
+
